@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::controller(UserServiceController::class)->group(function (){
+    Route::get("/login", "login");
+    Route::post("/login", "doLogin");
+    Route::post("/logout", "doLogout");
 });

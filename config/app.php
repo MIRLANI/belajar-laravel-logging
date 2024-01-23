@@ -1,5 +1,7 @@
 <?php
 
+use App\Providers\UserServiceProvider;
+use App\Services\UserService;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
@@ -168,6 +170,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        UserServiceProvider::class,
     ])->toArray(),
 
     /*
